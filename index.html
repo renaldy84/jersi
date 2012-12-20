@@ -1,0 +1,41 @@
+<style>
+.row{
+	padding: 5px;
+	border-bottom : solid 1px #333;
+}
+</style>
+<script src="src/jquery.js"></script>
+<script src="src/jersi.js"></script>
+<h3>Members</h3>
+<div class="members">
+	<div class="row">
+		<div>
+			Name : <span class="name"></span>	
+		</div>
+		<div>
+			Age : <span class="age"></span>
+		</div>
+	</div>
+</div>
+
+<script>
+var data = [{
+				name : "Foo bar",
+				age : 28
+			},
+			{
+				name : "Lucy Lawles",
+				age : 40
+			},
+			{
+				name : "Dora Emon",
+				age : 13
+			},
+			{
+				name : "Jar Jar Binks",
+				age : 176
+			}];
+
+jersi('.members',data);
+
+</script>
