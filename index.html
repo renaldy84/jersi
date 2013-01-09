@@ -17,7 +17,7 @@
 		</div>
 	</div>
 </div>
-
+<a href="#" id="prev">Previous Data</a>&nbsp;&nbsp;<a href="#" id="next">Next Data</a>
 <script>
 var data = [{
 				name : "Foo bar",
@@ -36,6 +36,34 @@ var data = [{
 				age : 176
 			}];
 
-jersi('.members',data);
+var data2 = [{
+				name : "Willys",
+				age : 45
+			},
+			{
+				name : "Stratham",
+				age : 40
+			},
+			{
+				name : "Rock",
+				age : 43
+			},
+			{
+				name : "Grecko",
+				age : 53
+			},
+			{
+				name : "Luke",
+				age : 56
+			}];
 
+$(document).ready(function(){
+	jersi('.members',data);
+	$("#next").click(function(){
+		jersi('.members',data2);
+	});
+	$("#prev").click(function(){
+		jersi('.members',data);
+	});
+});
 </script>
